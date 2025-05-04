@@ -1,0 +1,39 @@
+{
+  "name": "ci-cd-playground",
+  "version": "1.0.0",
+  "description": "CI와 CD 테스트를 위한 서비스",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "nodemon -e ts --exec \"npm run build && npm run start\"",
+    "find-deadcode": "knip --config ./knip.json",
+    "typecheck": "npx tsc --noEmit --skipLibCheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moooooooai/ci-cd-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moooooooai/ci-cd-playground/issues"
+  },
+  "homepage": "https://github.com/moooooooai/ci-cd-playground#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "knip": "^5.53.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "ts-pattern": "^5.7.0"
+  }
+}
